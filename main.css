@@ -1,0 +1,31 @@
+.containerOfboxes{
+    width: 202px;
+display: flex;
+flex-wrap: wrap;
+/* margin: 250px auto 0; */
+}
+.box1{
+    display: flex;
+    background-color: rgb(0, 51, 169);
+    width: 63px;
+    height: 63px;
+    font-size: 40px;
+    margin: 2px;
+    color: white;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.players{
+    display: flex;
+justify-content: space-around;
+align-items: center;
+margin-top: 20px;
+
+width: 200px;
+}
