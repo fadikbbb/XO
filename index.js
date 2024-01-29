@@ -1,21 +1,41 @@
 let boxes = document.querySelectorAll(".box1");
-let player1 = document.querySelector(".player1");
 let player2 = document.querySelector(".player2");
-let num1 = document.querySelector(".player1 span");
-let num2 = document.querySelector(".player2 span");
-let val1, val2;
-// console.log(boxes);
-player1 = true;
-// boxes[0].innerHTML = "x";
+let player1 = document.querySelector(".player1");
+let num1 = document.querySelector(".num1");
+let num2 = document.querySelector(".num2");
+let name1 = document.querySelector(".inputPlayer1");
+let name2 = document.querySelector(".inputPlayer2");
+let submit = document.getElementsByClassName("submit")[0];
+let restart = document.querySelector(".restart");
+let change = true;
+console.log(submit);
+console.log(restart);
+console.log(name1);
+console.log(name2);
+console.log(num1);
+console.log(num2);
+console.log(parseInt(num1.innerHTML) + 1);
+restart.onclick = function () {
+  location.reload();
+};
+submit.addEventListener("click", function (event) {
+  event.preventDefault();
+  player1.innerHTML = `${name1.value} :`;
+  player2.innerHTML = `${name2.value} :`;
+  localStorage.setItem("name1", name1.value);
+  localStorage.setItem("name2", name2.value);
+});
 document.addEventListener("click", function (e) {
-//   console.log(e.target);
   if (e.target.innerHTML === "") {
-    if (player1 == true) {
+    if (change == true) {
       e.target.innerHTML = "x";
-      player1 = false;
+      e.target.style.cssText = `color:red`;
+      // e.target.style.cssText=`color:red;`
+      change = false;
     } else {
       e.target.innerHTML = "o";
-      player1 = true;
+      e.target.style.cssText = `color:rgb(17, 255, 0)`;
+      change = true;
     }
   }
   x(0, 1, 2);
@@ -40,9 +60,7 @@ document.addEventListener("click", function (e) {
       boxes[two].innerHTML == "x" &&
       boxes[three].innerHTML == "x"
     ) {
-    //   console.log("enter");
-      console.log(val1);
-      sessionStorage.setItem("winer1",parseInt(num1.innerHTML)+1);
+      sessionStorage.setItem("winer1", parseInt(num1.innerHTML) + 1);
       location.reload();
     }
   }
@@ -52,17 +70,25 @@ document.addEventListener("click", function (e) {
         boxes[two].innerHTML == "o" &&
         boxes[three].innerHTML) == "o"
     ) {
-    sessionStorage.setItem("winer2",parseInt(num2.innerHTML)+1)
+      sessionStorage.setItem("winer2", parseInt(num2.innerHTML) + 1);
       location.reload();
     }
   }
 });
+
 if (sessionStorage.getItem("winer1")) {
-//   console.log("test");
   num1.innerHTML = sessionStorage.getItem("winer1");
 }
 if (sessionStorage.getItem("winer2")) {
-    // console.log("test");
   num2.innerHTML = sessionStorage.getItem("winer2");
 }
+
+console.log(localStorage.getItem("name1"));
+if (localStorage.getItem("name1")) {
+  player1.innerHTML = `${localStorage.getItem("name1")}: `;
+}
+if (localStorage.getItem("name2")) {
+  player2.innerHTML = `${localStorage.getItem("name2")} : `;
+}
 // localStorage.clear()
+// sessionStorage.clear()

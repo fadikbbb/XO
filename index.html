@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fadikabbani</title>
     <link rel="stylesheet" href="main.css" />
-    <link rel="icon" href="img/5854672.png">
+    <link rel="icon" href="img/5854672.png" />
   </head>
   <body>
     <div class="all">
+      <form action="">
+        <h4>name player-1:</h4>
+        <input type="text" class="inputPlayer1" />
+        <h4 class="labelName">name player-2:</h4>
+        <input type="text" class="inputPlayer2" />
+        <button class="submit">send</button>
+      </form>
       <div class="containerOfboxes">
         <div class="box1"></div>
         <div class="box1"></div>
@@ -21,9 +28,17 @@
         <div class="box1"></div>
       </div>
       <div class="players">
-        <div class="player1">player1:<span>0</span></div>
-        <div class="player2">player2:<span>0</span></div>
+        <div class="containerPlayer1">
+          <div class="player1">player-1:</div>
+          <span class="num1">0</span>
+        </div>
+        <hr style="width: 100px" />
+        <div class="containerPlayer2">
+          <div class="player2">player-2:</div>
+          <span class="num2">0</span>
+        </div>
       </div>
+      <button class="restart">restart</button>
     </div>
     <script src="index.js"></script>
   </body>

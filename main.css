@@ -1,7 +1,12 @@
+body{
+    background-color: rgb(0, 51, 169);
+}
 .containerOfboxes{
-    width: 202px;
+    width: 193.8px;
 display: flex;
 flex-wrap: wrap;
+box-shadow: 5px 5px 10px 1px rgb(255, 0, 0),-5px -5px 10px 1px rgb(17, 255, 0);
+/* box-shadow: -10px -10px 10px 1px rgb(157, 52, 52); */
 /* margin: 250px auto 0; */
 }
 .box1{
@@ -10,22 +15,77 @@ flex-wrap: wrap;
     width: 63px;
     height: 63px;
     font-size: 40px;
-    margin: 2px;
+    border: 1px solid white;
     color: white;
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .all{
     display: flex;
+    height: 100vh;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 .players{
     display: flex;
+    flex-direction: column;
 justify-content: space-around;
 align-items: center;
 margin-top: 20px;
-
 width: 200px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+
+    align-items: center;
+    justify-content: space-around;
+}
+input:focus{
+outline:  none;
+}
+input{
+    width: 40%;
+    height: 100%;
+    background-color: #000;
+    margin-bottom: 15px;
+}
+.containerPlayer1,.containerPlayer2{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    color: rgb(17, 255, 0);
+}
+.containerPlayer1{
+    color: red;
+    margin: 10px ;
+
+}
+hr{
+    background-image: linear-gradient(to right,rgb(0, 255, 0) ,rgb(255, 0, 0));
+    border: none;
+    height: 2px;
+}
+button{
+    background-image: linear-gradient(to right ,rgb(0, 255, 0) ,rgb(255, 0, 0));
+    padding: 10px 30px;
+    color: white;
+    background-color: blueviolet;
+
+}
+
+.player1,.player2{
+    margin-right: 15px;
+}
+h4{
+    margin: 5px;
+    font-size:15px;
+    font-family: Arial, Helvetica, sans-serif;
+color: red;
+}
+.labelName{
+    color:rgb(0, 255, 0)
 }
