@@ -67,7 +67,7 @@ input{
 
 }
 hr{
-    background-image: linear-gradient(to right ,black ,rgb(109, 109, 109));
+    background-image: linear-gradient(to right ,black ,transparent,black);
     border: none;
     height: 2px;
 }

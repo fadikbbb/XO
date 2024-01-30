@@ -7,26 +7,19 @@ let name1 = document.querySelector(".inputPlayer1");
 let name2 = document.querySelector(".inputPlayer2");
 let submit = document.getElementsByClassName("submit")[0];
 let restart = document.querySelector(".restart");
-let con_boxes=document.querySelector(".containerOfboxes")
-console.log(con_boxes)
+let con_boxes = document.querySelector(".containerOfboxes");
 let change = true;
-console.log(submit);
-console.log(restart);
-console.log(name1);
-console.log(name2);
-console.log(num1);
-console.log(num2);
-console.log(parseInt(num1.innerHTML) + 1);
+function re() {
+  for (let i = 0; i < boxes.length; i++) {
+    boxes[i].innerHTML = "";
+  }
+}
 restart.onclick = function () {
- for (let i = 0; i < boxes.length; i++) {
- boxes[i].innerHTML=""
-  
- }
+  re();
 };
 submit.addEventListener("click", function (event) {
   event.preventDefault();
-  if (name1.value!=""||name2.value!="") {
-    
+  if (name1.value != "" || name2.value != "") {
     player1.innerHTML = `${name1.value} :`;
     player2.innerHTML = `${name2.value} :`;
     localStorage.setItem("name1", name1.value);
@@ -69,7 +62,8 @@ con_boxes.addEventListener("click", function (e) {
       boxes[three].innerHTML == "x"
     ) {
       sessionStorage.setItem("winer1", parseInt(num1.innerHTML) + 1);
-      location.reload();
+      num1.innerHTML = parseInt(num1.innerHTML) + 1;
+      re();
     }
   }
   function o(one, two, three) {
@@ -79,7 +73,9 @@ con_boxes.addEventListener("click", function (e) {
         boxes[three].innerHTML) == "o"
     ) {
       sessionStorage.setItem("winer2", parseInt(num2.innerHTML) + 1);
-      location.reload();
+      re();
+      num2.innerHTML = parseInt(num2.innerHTML) + 1;
+      // location.reload();
     }
   }
 });
@@ -90,8 +86,6 @@ if (sessionStorage.getItem("winer1")) {
 if (sessionStorage.getItem("winer2")) {
   num2.innerHTML = sessionStorage.getItem("winer2");
 }
-
-console.log(localStorage.getItem("name1"));
 if (localStorage.getItem("name1")) {
   player1.innerHTML = `${localStorage.getItem("name1")}: `;
 }
