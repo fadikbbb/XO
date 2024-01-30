@@ -7,6 +7,8 @@ let name1 = document.querySelector(".inputPlayer1");
 let name2 = document.querySelector(".inputPlayer2");
 let submit = document.getElementsByClassName("submit")[0];
 let restart = document.querySelector(".restart");
+let con_boxes=document.querySelector(".containerOfboxes")
+console.log(con_boxes)
 let change = true;
 console.log(submit);
 console.log(restart);
@@ -16,25 +18,31 @@ console.log(num1);
 console.log(num2);
 console.log(parseInt(num1.innerHTML) + 1);
 restart.onclick = function () {
-  location.reload();
+ for (let i = 0; i < boxes.length; i++) {
+ boxes[i].innerHTML=""
+  
+ }
 };
 submit.addEventListener("click", function (event) {
   event.preventDefault();
-  player1.innerHTML = `${name1.value} :`;
-  player2.innerHTML = `${name2.value} :`;
-  localStorage.setItem("name1", name1.value);
-  localStorage.setItem("name2", name2.value);
+  if (name1.value!=""||name2.value!="") {
+    
+    player1.innerHTML = `${name1.value} :`;
+    player2.innerHTML = `${name2.value} :`;
+    localStorage.setItem("name1", name1.value);
+    localStorage.setItem("name2", name2.value);
+  }
 });
-document.addEventListener("click", function (e) {
+con_boxes.addEventListener("click", function (e) {
   if (e.target.innerHTML === "") {
     if (change == true) {
       e.target.innerHTML = "x";
-      e.target.style.cssText = `color:red`;
-      // e.target.style.cssText=`color:red;`
+      e.target.style.cssText = `color:#a1d4ff`;
+
       change = false;
     } else {
       e.target.innerHTML = "o";
-      e.target.style.cssText = `color:rgb(17, 255, 0)`;
+      e.target.style.cssText = `color:#91ffca`;
       change = true;
     }
   }

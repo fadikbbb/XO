@@ -1,17 +1,18 @@
 body{
-    background-color: rgb(0, 51, 169);
+    background-color: rgb(255, 255, 255);
 }
 .containerOfboxes{
     width: 193.8px;
 display: flex;
 flex-wrap: wrap;
-box-shadow: 5px 5px 10px 1px rgb(255, 0, 0),-5px -5px 10px 1px rgb(17, 255, 0);
+background-image: linear-gradient(to right ,black ,rgb(109, 109, 109));
+box-shadow: 5px 5px 10px 1px rgb(0, 0, 0),-5px -5px 10px 1px rgb(109, 109, 109);
 /* box-shadow: -10px -10px 10px 1px rgb(157, 52, 52); */
 /* margin: 250px auto 0; */
 }
 .box1{
     display: flex;
-    background-color: rgb(0, 51, 169);
+    background-color:transparent;
     width: 63px;
     height: 63px;
     font-size: 40px;
@@ -50,30 +51,32 @@ outline:  none;
 input{
     width: 40%;
     height: 100%;
-    background-color: #000;
+    background-image: linear-gradient(to right ,black ,rgb(109, 109, 109));
     margin-bottom: 15px;
+    color: white;
 }
+
 .containerPlayer1,.containerPlayer2{
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    color: rgb(17, 255, 0);
-}
+    color: black;}
 .containerPlayer1{
-    color: red;
+
     margin: 10px ;
 
 }
 hr{
-    background-image: linear-gradient(to right,rgb(0, 255, 0) ,rgb(255, 0, 0));
+    background-image: linear-gradient(to right ,black ,rgb(109, 109, 109));
     border: none;
     height: 2px;
 }
 button{
-    background-image: linear-gradient(to right ,rgb(0, 255, 0) ,rgb(255, 0, 0));
+    background-image: linear-gradient(to right ,black ,rgb(109, 109, 109));
     padding: 10px 30px;
     color: white;
     background-color: blueviolet;
+    border: 1px solid gray;
 
 }
 
@@ -84,8 +87,5 @@ h4{
     margin: 5px;
     font-size:15px;
     font-family: Arial, Helvetica, sans-serif;
-color: red;
-}
-.labelName{
-    color:rgb(0, 255, 0)
+color: black;
 }
