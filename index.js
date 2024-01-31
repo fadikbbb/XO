@@ -21,8 +21,8 @@ restart.onclick = function () {
 submit.addEventListener("click", function (event) {
   event.preventDefault();
   if (name1.value != "" || name2.value != "") {
-    player1.innerHTML = `${name1.value} :`;
-    player2.innerHTML = `${name2.value} :`;
+    player1.innerHTML = `X-${name1.value} :`;
+    player2.innerHTML = `O-${name2.value} :`;
     localStorage.setItem("name1", name1.value);
     localStorage.setItem("name2", name2.value);
   }
@@ -40,23 +40,15 @@ con_boxes.addEventListener("click", function (e) {
       change = true;
     }
   }
-  x(0, 1, 2);
-  x(3, 4, 5);
-  x(6, 7, 8);
-  x(2, 5, 8);
-  x(1, 4, 7);
-  x(0, 3, 6);
-  x(0, 4, 8);
-  x(2, 4, 6);
-  o(0, 1, 2);
-  o(3, 4, 5);
-  o(6, 7, 8);
-  o(2, 5, 8);
-  o(1, 4, 7);
-  o(0, 3, 6);
-  o(0, 4, 8);
-  o(2, 4, 6);
-  function x(one, two, three) {
+  XO(0, 1, 2);
+  XO(3, 4, 5);
+  XO(6, 7, 8);
+  XO(2, 5, 8);
+  XO(1, 4, 7);
+  XO(0, 3, 6);
+  XO(0, 4, 8);
+  XO(2, 4, 6);
+  function XO(one, two, three) {
     if (
       boxes[one].innerHTML == "x" &&
       boxes[two].innerHTML == "x" &&
@@ -66,8 +58,6 @@ con_boxes.addEventListener("click", function (e) {
       num1.innerHTML = parseInt(num1.innerHTML) + 1;
       re();
     }
-  }
-  function o(one, two, three) {
     if (
       (boxes[one].innerHTML == "o" &&
         boxes[two].innerHTML == "o" &&
@@ -88,10 +78,10 @@ if (sessionStorage.getItem("winer2")) {
   num2.innerHTML = sessionStorage.getItem("winer2");
 }
 if (localStorage.getItem("name1")) {
-  player1.innerHTML = `${localStorage.getItem("name1")}: `;
+  player1.innerHTML = `X-${localStorage.getItem("name1")}: `;
 }
 if (localStorage.getItem("name2")) {
-  player2.innerHTML = `${localStorage.getItem("name2")} : `;
+  player2.innerHTML = `O-${localStorage.getItem("name2")} : `;
 }
 restart_point.addEventListener("click",function(){
   num1.innerHTML="0"
