@@ -37,7 +37,7 @@ box-shadow: 5px 5px 10px 1px rgb(0, 0, 0),-5px -5px 10px 1px rgb(109, 109, 109);
 justify-content: space-around;
 align-items: center;
 margin-top: 20px;
-width: 300px;
+width: 70%;
 }
 form{
     display: flex;
@@ -94,6 +94,5 @@ color: black;
     flex-direction: column;
 }
 .point{
-    width: 140px;
 margin-left: 30px;
 }
