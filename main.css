@@ -21,6 +21,9 @@ box-shadow: 5px 5px 10px 1px rgb(0, 0, 0),-5px -5px 10px 1px rgb(109, 109, 109);
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.box1:hover{
+    background-color: #ffffff40;
+}
 .all{
     display: flex;
     height: 100vh;
@@ -30,11 +33,11 @@ box-shadow: 5px 5px 10px 1px rgb(0, 0, 0),-5px -5px 10px 1px rgb(109, 109, 109);
 }
 .players{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 justify-content: space-around;
 align-items: center;
 margin-top: 20px;
-width: 200px;
+width: 300px;
 }
 form{
     display: flex;
@@ -61,11 +64,7 @@ input{
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     color: black;}
-.containerPlayer1{
 
-    margin: 10px ;
-
-}
 hr{
     background-image: linear-gradient(to right ,black ,transparent,black);
     border: none;
@@ -77,7 +76,8 @@ button{
     color: white;
     background-color: blueviolet;
     border: 1px solid gray;
-
+border-radius: 9px;
+cursor: pointer;
 }
 
 .player1,.player2{
@@ -88,4 +88,12 @@ h4{
     font-size:15px;
     font-family: Arial, Helvetica, sans-serif;
 color: black;
+}
+.containerplayers{
+    display: flex;
+    flex-direction: column;
+}
+.point{
+    width: 140px;
+margin-left: 30px;
 }

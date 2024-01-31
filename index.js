@@ -9,6 +9,7 @@ let submit = document.getElementsByClassName("submit")[0];
 let restart = document.querySelector(".restart");
 let con_boxes = document.querySelector(".containerOfboxes");
 let change = true;
+let restart_point=document.querySelector(".point")
 function re() {
   for (let i = 0; i < boxes.length; i++) {
     boxes[i].innerHTML = "";
@@ -92,5 +93,10 @@ if (localStorage.getItem("name1")) {
 if (localStorage.getItem("name2")) {
   player2.innerHTML = `${localStorage.getItem("name2")} : `;
 }
+restart_point.addEventListener("click",function(){
+  num1.innerHTML="0"
+  num2.innerHTML="0"
+  sessionStorage.clear()
+})
 // localStorage.clear()
 // sessionStorage.clear()
