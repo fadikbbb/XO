@@ -1,109 +1,113 @@
-body{
+body {
   background-image: url("img/xo-earrings-in-sterling-silver-mazi-zo-358134_900x.webp");
-  background-repeat:no-repeat;
-  background-position-y:center ;
-background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-size: cover;
 }
-@media (max-width:480px){
-    body{
-        background-repeat:no-repeat;
-background-position-y:center ;
-background-size: cover;
-background-position-x:-140px ;
-    }
+@media (max-width: 480px) {
+  body {
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: cover;
+    background-position-x: -140px;
+  }
 }
-.containerOfboxes{
-    width: 193.8px;
-display: flex;
-flex-wrap: wrap;
-background-image: linear-gradient(to right ,black ,rgb(109, 109, 109));
-box-shadow: 5px 5px 10px 1px rgb(0, 0, 0),-5px -5px 10px 1px rgb(109, 109, 109);
-/* box-shadow: -10px -10px 10px 1px rgb(157, 52, 52); */
-/* margin: 250px auto 0; */
+.containerOfboxes {
+  width: 193.8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-image: linear-gradient(to right, black, rgb(109, 109, 109));
+  box-shadow: 5px 5px 10px 1px rgb(0, 0, 0),
+    -5px -5px 10px 1px rgb(109, 109, 109);
+  /* box-shadow: -10px -10px 10px 1px rgb(157, 52, 52); */
+  /* margin: 250px auto 0; */
 }
-.box1{
-    display: flex;
-    background-color:transparent;
-    width: 63px;
-    height: 63px;
-    font-size: 40px;
-    border: 1px solid white;
-    color: white;
-    justify-content: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.box1 {
+  display: flex;
+  background-color: transparent;
+  width: 63px;
+  height: 63px;
+  font-size: 40px;
+  border: 1px solid white;
+  color: white;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.box1:hover{
-    background-color: #ffffff40;
+.box1:hover {
+  background-color: #ffffff40;
 }
-.all{
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+.all {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
-.players{
-    display: flex;
-    flex-direction: row;
-justify-content: space-around;
-align-items: center;
-margin-top: 20px;
-width: 70%;
+.players {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  width: 70%;
 }
-form{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    color: white;
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
 
-    align-items: center;
-    justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
 }
-input:focus{
-outline:  none;
+input:focus {
+  outline: none;
 }
-input{
-    width: 40%;
-    height: 100%;
-    background-image: linear-gradient(to right ,black ,rgb(109, 109, 109));
-    margin-bottom: 15px;
-    color: white;
-}
-
-.containerPlayer1,.containerPlayer2{
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    color: black;}
-
-hr{
-    background-image: linear-gradient(to right ,black ,transparent,black);
-    border: none;
-    height: 2px;
-}
-button{
-    background-image: linear-gradient(to right ,black ,rgb(109, 109, 109));
-    padding: 10px 30px;
-    color: white;
-    background-color: blueviolet;
-    border: 1px solid gray;
-border-radius: 9px;
-cursor: pointer;
+input {
+  width: 40%;
+  height: 100%;
+  background-image: linear-gradient(to right, black, rgb(109, 109, 109));
+  margin-bottom: 15px;
+  color: white;
 }
 
-.player1,.player2{
-    margin-right: 15px;
+.containerPlayer1,
+.containerPlayer2 {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  color: black;
 }
-h4{
-    margin: 5px;
-    font-size:15px;
-    font-family: Arial, Helvetica, sans-serif;
-color: black;
+
+hr {
+  background-image: linear-gradient(to right, black, transparent, black);
+  border: none;
+  height: 2px;
 }
-.containerplayers{
-    display: flex;
-    flex-direction: column;
+button {
+  background-image: linear-gradient(to right, black, rgb(109, 109, 109));
+  padding: 10px 30px;
+  color: white;
+  background-color: blueviolet;
+  border: 1px solid gray;
+  border-radius: 9px;
+  cursor: pointer;
 }
-.point{
-margin-left: 30px;
+
+.player1,
+.player2 {
+  margin-right: 15px;
+}
+h4 {
+  margin: 5px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+.containerplayers {
+  display: flex;
+  flex-direction: column;
+}
+.point {
+  margin-left: 30px;
 }
